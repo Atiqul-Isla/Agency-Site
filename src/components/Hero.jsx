@@ -1,6 +1,5 @@
 import React, {useState, useRef, useEffect} from 'react'
 import {useInView} from 'react-intersection-observer'
-import Typed from 'react-typed'
 import {Link} from 'react-scroll'
 import {TypeAnimation} from 'react-type-animation'
 const Hero = () => {
