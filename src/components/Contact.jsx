@@ -5,7 +5,7 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
     
-        emailjs.sendForm(process.env.REACT_APP_SERVICE_KEY, process.env.REACT_APP_EMAIL_TEMPLATE_KEY, e.target, process.env.REACT_APP_API_KEY)
+        emailjs.sendForm('service_dthrqjn', 'template_9ps6hpm', e.target, 'yWiJgqqQ_6TeCQOD0')
           .then((result) => {
               console.log(result.text);
           }, (error) => {

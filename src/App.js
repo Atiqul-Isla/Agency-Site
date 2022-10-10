@@ -9,8 +9,6 @@ import Footer from "./components/Footer";
 
 
 function App() {
-  require('dotenv').config()
-  
   return (
     <div>
       <Navbar />
