@@ -13,9 +13,9 @@ const Services = () => {
                 <h2 className='text-2xl font-bold text-center py-8'>Various Industries</h2>
                 <p className='text-center text-4xl font-bold'>Copy Writing</p>
                 <div className='text-center font-medium'>
-                    <p className='py-2 border-b mx-8 mt-8'>10 cents per word</p>
-                    <p className='py-2 border-b mx-8'>20 cents per word</p>
-                    <p className='py-2 border-b mx-8'>30 cents per word</p>
+                    <p className='py-2 border-b mx-8 mt-8'>Strong online presence is the key to driving traffic</p>
+                    <p className='py-2 border-b mx-8'>Maximize your persuasion potential</p>
+                    <p className='py-2 border-b mx-8'>Convey your ideas clearly</p>
                 </div>
                 <Link to="contact" spy={true} smooth={true} offset={0} duration={500} style={{cursor: 'pointer'}} className=' text-center bg-transparent w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black border transition-colors duration-700 transform hover:bg-black hover:text-[#00df9a] focus:border-4 focus:border-black'>Get Started</Link>
             </div>
@@ -24,9 +24,9 @@ const Services = () => {
                 <h2 className='text-2xl font-bold text-center py-8'>Social Media</h2>
                 <p className='text-center text-4xl font-bold'>Digital Marketing</p>
                 <div className='text-center font-medium'>
-                    <p className='py-2 border-b mx-8 mt-8'>10 cents per word</p>
-                    <p className='py-2 border-b mx-8'>20 cents per word</p>
-                    <p className='py-2 border-b mx-8'>30 cents per word</p>
+                    <p className='py-2 border-b mx-8 mt-8'>Strengthen online presence to drive more traffic</p>
+                    <p className='py-2 border-b mx-8'>Improve how you spend on ads</p>
+                    <p className='py-2 border-b mx-8'>Increase your R.O.A.S</p>
                 </div>
                 <Link to="contact" spy={true} smooth={true} offset={0} duration={500} style={{cursor: 'pointer'}} className=' text-center bg-transparent w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black border transition-colors duration-700 transform hover:bg-black hover:text-[#00df9a] focus:border-4 focus:border-black'>Get Started</Link>
             </div>
@@ -35,9 +35,9 @@ const Services = () => {
                 <h2 className='text-2xl font-bold text-center py-8'>Various Industry</h2>
                 <p className='text-center text-4xl font-bold'>Emailing</p>
                 <div className='text-center font-medium'>
-                    <p className='py-2 border-b mx-8 mt-8'>10 cents per word</p>
-                    <p className='py-2 border-b mx-8'>20 cents per word</p>
-                    <p className='py-2 border-b mx-8'>30 cents per word</p>
+                    <p className='py-2 border-b mx-8 mt-8'>Increase recurring sales opportunities</p>
+                    <p className='py-2 border-b mx-8'>Design the perfect email marketing campaign</p>
+                    <p className='py-2 border-b mx-8'>Keep customers engaged</p>
                 </div>
                 <Link to="contact" spy={true} smooth={true} offset={0} duration={500} style={{cursor: 'pointer'}} className=' text-center bg-transparent w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black border transition-colors duration-700 transform hover:bg-black hover:text-[#00df9a] focus:border-4 focus:border-black'>Get Started</Link>
             </div>

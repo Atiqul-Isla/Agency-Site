@@ -19,7 +19,7 @@ const Contact = () => {
             <div className='flex flex-col justify-between'>
                 <div>
                     <h1 className='font-bold lg:text-4xl md:text-3xl sm:txt-2xl text-xl tracking-wide'>Contact Us</h1>
-                    <p className='pt-2 lg:text-4xl md:text-3xl sm:txt-2xl text-xl tracking-wide'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum recusandae facere veritatis distinctio esse magnam dolor in.</p>
+                    <p className='pt-2 lg:text-3xl md:text-2xl sm:txt-xl text-xl tracking-wide'>Whether you're curious about us, want to schedule a meeting, have a problem you want to solve or simply just want to have a chat, do not hesitate to contact us!</p>
                 </div>
                 <div className='py-2'>
                     <div className='flex flex-row py-2'>
