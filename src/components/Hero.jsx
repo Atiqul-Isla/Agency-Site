@@ -2,7 +2,7 @@ import React, {useState, useRef, useEffect} from 'react'
 import {useInView} from 'react-intersection-observer'
 import Typed from 'react-typed'
 import {Link} from 'react-scroll'
-import {ImArrowUp2} from 'react-icons/im'
+import {TypeAnimation} from 'react-type-animation'
 const Hero = () => {
 
     const items = document.querySelectorAll('.hero-items')
@@ -18,10 +18,18 @@ const Hero = () => {
                         <p className='md:text-5xl sm:text-4xl text-xl font-bold'>
                             Rapid delivery for
                         </p>
-                        <Typed 
+                        <TypeAnimation 
                         className='md:text-5xl sm:text-4xl text-xl font-bold text-[#00df9a] md:pl-3 sm:pl-2 pl-2 py-4' 
-                        strings={['E-commerce', 'Services', 'SaaS']} 
-                        typeSpeed={40} backSpeed={40} loop />
+                        sequence={[
+                            'One', // Types 'One'
+                            1000, // Waits 1s
+                            'Two', // Deletes 'One' and types 'Two'
+                            2000, // Waits 2s
+                            'Three', // Types 'Three' without deleting 'Two'
+                            () => {
+                              console.log('Done typing!'); // Place optional callbacks anywhere in the array
+                            }
+                          ]} speed={50} repeat={Infinity} />
                     </div>
                     <Link to="services" spy={true} smooth={true} offset={0} duration={500} style={{cursor: 'pointer'}} className='bg-transparent w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white border transition-colors duration-700 transform hover:bg-white hover:text-black focus:border-4 focus:border-black'>Get Started</Link>
                 </div>
