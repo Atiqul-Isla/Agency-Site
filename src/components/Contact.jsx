@@ -71,7 +71,7 @@ const Contact = () => {
                         </div>
                         
                         <div>
-                            <label className='pb-2'>Message</label>
+                            <label className='pb-2'>Message<strong className='text-[#FFa065]'>*</strong></label>
                             <textarea rows="10" className="text-black ring-1 ring-gray-300 w-full rounded-md px-4 outline-none focus:ring-2 focus:ring-[#00df9a] mt-2" placeholder='Tell us your request...' name='message' style={{cursor: 'pointer'}} id='message'/>
                         </div>
                         <button  className='inline-block self-endbg-transparent w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white border transition-colors duration-700 transform hover:bg-white hover:text-black focus:border-4 focus:border-black'>
