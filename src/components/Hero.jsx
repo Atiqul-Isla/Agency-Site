@@ -5,17 +5,46 @@ import {TypeAnimation} from 'react-type-animation'
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 import { Parallax } from 'react-parallax'
 import bgImg  from '../data/images/bgimg-01.jpg'
+import { motion, useAnimation } from 'framer-motion'
+
 const Hero = () => {
     const [nav, setNav] = useState(true)
     const [click, setClick] = useState(false)
+
+    const {ref, inView} = useInView({
+        threshold: 0.2
+      })
+    
+      const animation = useAnimation()
+    
+      useEffect(() => {
+        console.log("Use effect hook, inView=", inView)
+        if(inView){
+          animation.start({
+            y: 0,
+            opacity: 1,
+            transition: {
+              type: 'spring', duration: 2, bounce: 0.3,
+            }
+          })
+        }
+        if(!inView){
+          animation.start({
+            y: -250,
+            opacity: 0,
+            transition: {
+              type: 'spring', duration: 2, bounce: 0.3,
+            }
+          })
+        }
+    
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, [inView]);
 
     const handleNav = () => {
         setNav(!nav)
     }
 
-    const handleClick = () => {
-        setClick(!click)
-    }
     const items = document.querySelectorAll('.hero-items')
     const {ref: myRef, inView: isVisible, entry} = useInView();
     console.log(entry)
@@ -23,8 +52,8 @@ const Hero = () => {
         <div>
         <Parallax strength={400} bgImage={bgImg} >
         <div className='hero-wrapper h-screen'>
-            <div className='navbar-perspective'>
-                <div className='text-white flex justify-between max-w-[1540px] mx-auto items-center h-24 px-4'>
+            <div className='navbar-perspective' ref={ref}>
+                <motion.div className='text-white flex justify-between max-w-[1540px] mx-auto items-center h-24 px-4' animate={animation}>
                     <h1 className='w-full text-3xl font-bold text-[#00df9a]'>NIVALY</h1>
                     <ul className='hidden md:flex pt-18 uppercase'>
                         <li className='p-4'>
@@ -68,12 +97,12 @@ const Hero = () => {
                             </ul>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
    
             <div className='text-white' id='hero'>
                 <div className='bg-black/70'>
-                    <div className='max-w-[800px] w-full mt-[-96px] h-screen mx-auto text-center flex flex-col justify-center hero-items' ref={myRef}>
+                    <motion.div className='max-w-[800px] w-full mt-[-96px] h-screen mx-auto text-center flex flex-col justify-center hero-items' animate={animation}>
                         {/* <h2 className='text-[#00df9a] font-bold p-1md:text-7md sm:text-6md text-4md'>START YOUR DIGITAL MARKETING JOURNEY</h2> */}
                         <h1 className='md:text-5xl sm:text-5xl text-4xl font-bold md:py-3'>Grow your business</h1>
                         <div className='flex justify-center items-center'>
@@ -95,7 +124,7 @@ const Hero = () => {
                             ]} speed={50} repeat={Infinity} />
                         </div>
                         <Link to="services" spy={true} smooth={true} offset={-286} duration={500} style={{cursor: 'pointer'}} className='bg-transparent w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white border transition-colors duration-700 transform hover:bg-white hover:text-black focus:border-4 focus:border-black'>Get Started</Link>
-                    </div>
+                    </motion.div>
                 </div>
         
             </div>

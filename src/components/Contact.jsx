@@ -1,8 +1,39 @@
 import React from 'react'
 import {AiFillPhone, AiOutlineMail, } from 'react-icons/ai'
 import emailjs from 'emailjs-com'
+import {useInView} from 'react-intersection-observer'
+import {useEffect} from 'react'
+import {motion, useAnimation} from 'framer-motion'
 const Contact = () => {
-
+    const {ref, inView} = useInView({
+        threshold: 0.2
+      })
+    
+      const animation = useAnimation()
+    
+      useEffect(() => {
+        console.log("Use effect hook, inView=", inView)
+        if(inView){
+          animation.start({
+            y: 0,
+            opacity: 1,
+            transition: {
+              type: 'spring', duration: 2, bounce: 0.3,
+            }
+          })
+        }
+        if(!inView){
+          animation.start({
+            y: 550,
+            opacity: 0,
+            transition: {
+              type: 'spring', duration: 2, bounce: 0.3,
+            }
+          })
+        }
+    
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, [inView]);
     
     const sendEmail = (e) => {
         e.preventDefault();
@@ -39,8 +70,8 @@ const Contact = () => {
         }
       }; 
   return (
-    <div className="bg-white w-full text-black py-16 px-4" id='contact'>
-        <div className='max-w-[1240px] mx-auto flex flex-col md:flex-row md:space-x-12 md:space-y-0 space-y-6 overflow-hidden'>
+    <div className="bg-white w-full text-black py-16 px-4" id='contact' ref={ref}>
+        <motion.div className='max-w-[1240px] mx-auto flex flex-col md:flex-row md:space-x-12 md:space-y-0 space-y-6 overflow-hidden' animate={animation}>
             <div className=''>
                 <div>
                     <h1 className='font-bold lg:text-4xl md:text-3xl sm:txt-2xl text-xl tracking-wide'>Contact Us</h1>
@@ -85,7 +116,7 @@ const Contact = () => {
 
                 </div>
             </div>
-        </div>
+        </motion.div>
     </div>
   )
 }
