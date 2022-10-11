@@ -7,7 +7,7 @@ import {useEffect} from 'react'
 const About = () => {
 
   const {ref, inView} = useInView({
-    threshold: 0.2
+    threshold: 0.4
   })
 
   const animation = useAnimation()
@@ -25,8 +25,9 @@ const About = () => {
     }
     if(!inView){
       animation.start({
-        x: 250,
+        x: 100,
         opacity: 0,
+        overflow: 'hidden',
         transition: {
           type: 'spring', duration: 2, bounce: 0.3,
         }

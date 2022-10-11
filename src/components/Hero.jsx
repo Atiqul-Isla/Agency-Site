@@ -5,6 +5,7 @@ import {TypeAnimation} from 'react-type-animation'
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 import { Parallax } from 'react-parallax'
 import bgImg  from '../data/images/bgimg-01.jpg'
+import logo  from '../data/images/logo_flower.png'
 import { motion, useAnimation } from 'framer-motion'
 
 const Hero = () => {
@@ -54,7 +55,7 @@ const Hero = () => {
         <div className='hero-wrapper h-screen'>
             <div className='navbar-perspective' ref={ref}>
                 <motion.div className='text-white flex justify-between max-w-[1540px] mx-auto items-center h-24 px-4' animate={animation}>
-                    <h1 className='w-full text-3xl font-bold text-[#00df9a]'>NIVALY</h1>
+                    <h1 className='w-full text-3xl font-bold text-[#00df9a]'><img src=''></img>NIVALY</h1>
                     <ul className='hidden md:flex pt-18 uppercase'>
                         <li className='p-4'>
                             <Link to="hero" spy={true} smooth={true} offset={0} duration={500} style={{cursor: 'pointer'}} className='hover:text-[#00df9a]'>Home</Link>

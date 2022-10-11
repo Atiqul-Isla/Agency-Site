@@ -29,6 +29,7 @@ const Service = () => {
       animation.start({
         x: 250,
         opacity: 0,
+        overflow: 'hidden',
         transition: {
           type: 'spring', duration: 2, bounce: 0.3,
         }
