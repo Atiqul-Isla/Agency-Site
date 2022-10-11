@@ -3,6 +3,8 @@ import Group from '../data/images/group-01.jpg'
 import {Link} from 'react-scroll'
 
 const About = () => {
+
+ 
   return (
     <div className=' bg-white text-white w-full bg-dark py-16 px-4 py-8' id='about'>
         <div className=' bg-black max-w-[1540px] mx-auto grid md:grid-cols-2 py-24 rounded-lg px-4 text-center'>

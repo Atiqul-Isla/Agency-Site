@@ -32,7 +32,7 @@ const Services = () => {
             </div>
             <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-log hover:scale-110 duration-300'>
                 <SiMinutemailer size={80} className='text-[#00df9a] mx-auto mt-[3rem] bg-white'/>
-                <h2 className='text-2xl font-bold text-center py-8'>Various Industry</h2>
+                <h2 className='text-2xl font-bold text-center py-8'>Various Industries</h2>
                 <p className='text-center text-4xl font-bold'>Emailing</p>
                 <div className='text-center font-medium'>
                     <p className='py-2 border-b mx-8 mt-8'>Increase recurring sales opportunities</p>

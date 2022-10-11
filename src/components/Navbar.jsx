@@ -14,7 +14,7 @@ const Navbar = () => {
         setClick(!click)
     }
   return (
-    <div>
+    <div className='navbar-perspective'>
         <div className='text-white flex justify-between max-w-[1540px] mx-auto items-center h-24 px-4'>
         <h1 className='w-full text-3xl font-bold text-[#00df9a]'>NIVALY</h1>
         <ul className='hidden md:flex pt-18 uppercase'>
